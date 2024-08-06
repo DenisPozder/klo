@@ -1,0 +1,147 @@
+:root {
+  --main_color: #fff;
+  --text_color: #BE9F80;
+  --hover_color: #B0875D;
+  --title_color: #008B8B;
+  --background_color: #E5D4B4;
+}
+
+@font-face {
+  font-family: 'Annabelle';
+  src: url('./Fonts/Annabelle3.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arno-Pro';
+  src: url('./Fonts/ArnoPro.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arno-Pro';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--title_color);
+  text-transform: capitalize;
+}
+
+h2, h3, p {
+  color: var(--text_color);
+}
+
+.page-container {
+  overflow: hidden;
+}
+
+.button {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  background-color: var(--background_color);
+  color: var(--main_color);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &.specialties {
+    margin-top: 10px;
+  }
+
+  &.white {
+    background-color: var(--main_color);
+    color: var(--background_color);
+  }
+
+  &.white::after {
+    border: 2px solid var(--main_color);
+  }
+
+  &::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    border: 2px solid var(--background_color);
+    left: -10px;
+    top: -10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: -1;
+  }
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    background-color: var(--text_color);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: -10px;
+    right: -10px;
+    z-index: -2;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.hidden-left {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.hidden-right {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.song-hidden-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.song-hidden-right {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    margin-right: 0 !important;
+    margin-left: 10px;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  h1 {
+    font-size: 1.8rem !important;
+  }
+}

@@ -1,0 +1,249 @@
+.menu-and-drinks-card {
+    width: 100%;
+    height: 100%;
+
+    .madc-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: opacity 1s ease-out forwards;
+
+        @keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .madc-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+
+            &.show {
+                opacity: .3;
+            }
+        }
+
+        .madc-video {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            object-fit: cover;
+            transition: opacity .5s ease-in-out;
+
+            &.show {
+                opacity: .3;
+            }
+        }
+
+        .madc-slide-content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+
+            .madc-slide-left {
+                width: 50%;
+                height: 100%;
+                position: relative;
+                margin-left: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                h1 {
+                    text-transform: none;
+                    
+                    &:nth-child(1) {
+                        margin-bottom: 1.5rem;
+                        animation: leftAnim 1s forwards;
+
+                        @keyframes leftAnim {
+                            0% {
+                                transform: translateX(-100px);
+                                opacity: 0;
+                            }
+                            100% {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                h3 {
+                    color: var(--title_color) !important;
+                    animation: leftAnim 1.4s forwards;
+
+                    @keyframes leftAnim {
+                        0% {
+                            transform: translateX(-100px);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .madc-slide-right {
+                width: 50%;
+                position: relative;
+                height: 100%;
+                margin-right: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+
+                .madc-image {
+                    width: 100%;
+                    animation: rightAnim 1s forwards;
+
+                    @keyframes rightAnim {
+                        0% {
+                            transform: translateX(100px);
+                            opacity: 0;
+                        }
+                        100% {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .madc-slide-left {
+        margin-left: 80px !important;
+    }
+
+    .madc-slide-right {
+        margin-right: 80px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .madc-slide-left {
+        margin-left: 50px !important;
+    }
+
+    .madc-slide-right {
+        margin-right: 50px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .madc-slide-content {
+        flex-direction: column !important;
+
+        .madc-slide-left {
+            margin-left: 0px !important;
+            width: 100% !important;
+            z-index: 9999 !important;
+            align-items: center !important;
+
+            h1 {
+                &:nth-child(1) {
+                    margin-bottom: 1rem !important;
+                }
+            }
+
+            h3 {
+                text-align: center;
+                margin-bottom: 1rem !important;
+            }
+        }
+    
+        .madc-slide-right {
+            margin-right: 0px !important;
+            width: 100% !important;
+            align-items: center !important;
+
+            .madc-image {
+                height: 240px !important;
+                width: auto !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .madc-slide-content {
+        .madc-slide-left {
+            width: 100% !important;
+            height: 60% !important;
+    
+            h1 {
+                font-size: 1.4rem !important;
+            }
+    
+            h3 {
+                font-size: 1.1rem !important;
+            }
+        }
+    
+        .madc-slide-right {
+            width: 100% !important;
+            height: 40% !important;
+    
+            .madc-image {
+                width: 100%;
+                height: 180px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .madc-slide-content {
+        .madc-slide-left {
+            h1 {
+                font-size: 1.3rem !important;
+            }
+
+            h3 {
+                font-size: 1rem !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .madc-slide-content {
+        .madc-slide-left {
+            h1 {
+                font-size: 1.2rem !important;
+            }
+        }
+
+        .madc-slide-right {
+            width: 100% !important;
+            height: 50% !important;
+
+            .madc-image {
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+.gallery-component {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    .gc-pepper {
+        position: absolute;
+        width: 320px;
+        top: 0;
+        left: -60px;
+        transform: rotate(-32deg);
+        opacity: .45;
+    }
+
+    .gc-garlic {
+        position: absolute;
+        width: 280px;
+        bottom: -60px;
+        right: -40px;
+        opacity: .4;
+        transform: rotate(35deg);
+    }
+
+    .gc-dec {
+        position: absolute;
+        bottom: -65px;
+        left: -120px;
+        width: 340px;
+        z-index: 25;
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .gc-dec2 {
+        position: absolute;
+        top: -160px;
+        right: -60px;
+        height: 180px;
+        transform: rotate(-10deg);
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0) rotate(-10deg);
+        }
+    }
+
+    .gallery-component-content {
+        width: auto;
+        height: auto;
+        margin: 4rem 100px;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            z-index: 10;
+        }
+
+        &.show {
+            opacity: 1;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .gallery-component-content {
+        margin: 4rem 80px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .gallery-component-content {
+        margin: 4rem 50px !important;
+    }
+
+    .gc-pepper {
+        width: 280px !important;
+    }
+
+    .gc-garlic {
+        width: 240px !important;
+    }
+
+    .gc-dec {
+        left: -180px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery-component-content {
+        margin: 4rem 25px !important;
+    }
+
+    .gc-pepper {
+        width: 260px !important;
+        top: -45px !important;
+    }
+
+    .gc-garlic {
+        width: 240px !important;
+        right: -100px !important;
+    }
+
+    .gc-dec {
+        left: -140px !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gallery-component-content {
+        margin: 4rem 15px !important;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .gallery-component-content {
+        margin: 4rem 10px !important;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .gallery-component-content {
+        margin: 4rem 5px !important;
+    }
+}

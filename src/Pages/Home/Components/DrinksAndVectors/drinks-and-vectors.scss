@@ -1,0 +1,366 @@
+.drinks-and-vectors {
+    width: 100%;
+    background-color: var(--hover_color);
+    position: relative;
+    z-index: 1;
+    height: 603px;
+
+    .dav-background {
+        opacity: 0.2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .dav-vine {
+        position: absolute;
+        z-index: 2;
+        top: 100px;
+        right: -100px;
+        width: 480px;
+        transform: rotate(90deg);
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    .dav-rakija {
+        position: absolute;
+        z-index: 2;
+        top: -220px;
+        right: 640px;
+        transform: rotate(25deg);
+        height: 500px;
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    .dav-salt {
+        position: absolute;
+        z-index: 2;
+        bottom: -100px;
+        left: -80px;
+        height: 300px;
+        transform: rotate(45deg);
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0) rotate(45deg);
+        }
+    }
+
+    .dav-vine2 {
+        position: absolute;
+        top: -110px;
+        left: -75px;
+        height: 600px;
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    .dav-vine3 {
+        position: absolute;
+        top: 280px;
+        right: -110px;
+        height: 500px;
+    }
+
+    .dav-dec {
+        position: absolute;
+        top: -120px;
+        right: -80px;
+        width: 280px;
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .dav-dec2 {
+        position: absolute;
+        bottom: -140px;
+        width: 320px;
+        left: -80px;
+        transform: scaleY(1);
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .drinks-and-vectors-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100vw - 200px);
+        height: auto;
+        margin: 4rem 100px;
+        z-index: 3;
+
+        .drinks-and-vectors-top {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            h2 {
+                color: var(--main_color) !important;
+                text-align: center;
+                height: 100px;
+            }
+        }
+
+        .drinks-and-vectors-bottom {
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 30px;
+            column-gap: 15px;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.drinks-vector-card {
+    height: 300px !important;
+    max-height: 300px !important;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(2.5px);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+
+    &:hover .drinks-vector-overlay {
+        bottom: 0 !important;
+    }
+
+    .drinks-vector-inner {
+        padding: 20px 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+
+            svg {
+                font-size: 3.2rem;
+                color: var(--hover_color);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            text-align: center;
+            color: var(--hover_color) !important;
+        }
+    }
+
+    .drinks-vector-img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .drinks-vector-overlay {
+            position: absolute;
+            background: linear-gradient(to top, var(--background_color), transparent);
+            width: 100%;
+            height: 100%;
+            bottom: -100%;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: bottom .3s ease;
+
+            svg {
+                font-size: 3.6rem;
+                color: var(--title_color);
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .drinks-and-vectors-content {
+        width: calc(100vw - 160px) !important;
+        margin: 4rem 80px !important;
+    }
+    
+    .drinks-av-text {
+        font-size: 1.2rem !important;
+    }
+
+    .dav-rakija {
+        right: 560px !important;
+        height: 380px !important;
+        top: -140px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .drinks-and-vectors-content {
+        width: calc(100vw - 100px) !important;
+        margin: 4rem 50px !important;
+    }
+    
+    .drinks-and-vectors-bottom {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .drinks-av-text {
+        font-size: 1rem !important;
+    }
+
+    .drinks-and-vectors {
+        height: 933px !important;
+    }
+
+    .dav-rakija {
+        right: 360px !important;
+    }
+
+    .dav-vine {
+        top: 260px !important;
+    }
+
+    .dav-salt {
+        height: 260px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .drinks-and-vectors-content {
+        width: calc(100vw - 50px) !important;
+        margin: 4rem 25px !important;
+    }
+
+    .drinks-vector-card{
+        .drinks-vector-inner {
+            h1 {
+                font-size: 1.2rem !important;
+            }
+        }
+    }
+
+    .dav-rakija {
+        right: 240px !important;
+    }
+
+    .dav-salt {
+        height: 220px !important;
+    }
+
+    .dav-dec {
+        width: 240px !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .drinks-and-vectors {
+        height: 1263px !important;
+    }
+    .drinks-and-vectors-content {
+        width: calc(100vw - 30px) !important;
+        margin: 4rem 15px !important;
+
+        .drinks-and-vectors-bottom {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+
+    .drinks-av-text {
+        font-size: .9rem !important;
+        font-weight: 100;
+    }
+
+    .dav-rakija {
+        right: 200px !important;
+    }
+
+    .dav-vine {
+        top: 420px !important;
+    }
+
+    .dav-salt {
+        height: 180px !important;
+        bottom: -80px !important;
+    }
+
+    .dav-vine2 {
+        position: absolute;
+        top: -75px !important;
+        left: -75px;
+        height: 400px !important;
+    }
+
+    .dav-dec {
+        width: 200px !important;
+        right: -40px !important;
+        top: -80px !important;
+    }
+
+    .dav-dec2 {
+        width: 280px !important;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .drinks-and-vectors-content {
+        width: calc(100vw - 20px) !important;
+        margin: 4rem 10px !important;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .drinks-and-vectors-content {
+        width: calc(100vw - 10px) !important;
+        margin: 4rem 5px !important;
+    }
+
+    .drinks-av-text {
+        font-size: .8rem !important;
+    }
+
+    .dav-rakija {
+        right: 160px !important;
+    }
+}

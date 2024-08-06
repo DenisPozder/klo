@@ -1,0 +1,193 @@
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--main_color);
+
+    &.show {
+        opacity: 1;
+    }
+
+    .footer-top {
+        width: auto;
+        margin: 2rem 100px;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 15px;
+        row-gap: 30px;
+
+        .footer-column {
+            width: 100%;
+            height: auto;
+
+            &:nth-child(1) {
+                img {
+                    height: 100px;
+                }
+
+                h2 {
+                    height: 90px;
+                }
+            }
+
+            &:nth-child(2) {
+                h1 {
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                h2 {
+                    text-align: center;
+                    height: 90px;
+                }
+
+                .fc-h2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: auto !important;
+                    text-transform: capitalize;
+                }
+            }
+
+            &:nth-child(3) {
+                h1 {
+                    height: 100px;
+                    display: flex;
+                    justify-content: flex-end;
+                    text-align: right;
+                }
+
+                h2 {
+                    text-align: right;
+                    height: 90px;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        width: 100%;
+        height: auto;
+        background-color: var(--background_color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+
+        h3 {
+            color: var(--main_color);
+
+            span {
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .footer-top {
+        margin: 2rem 80px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer-top {
+        margin: 2rem 50px !important;
+    }
+
+    .footer-column {
+        h2 {
+            font-size: 1.2rem !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-top {
+        margin: 2rem 25px !important;
+
+        .footer-column {
+            h2 {
+                font-size: 1rem !important;
+            }
+    
+            img {
+                height: 80px !important;
+            }
+    
+            h1 {
+                height: 80px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer-top {
+        margin: 2rem 15px !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+
+        .footer-column {
+            align-items: flex-start !important;
+
+            h2 {
+                height: auto !important;
+            }
+
+            h1 {
+                font-size: 1.5rem !important;
+            }
+
+            &:nth-child(2) {
+                h1 {
+                    justify-content: flex-start !important;
+                    height: auto !important;
+                    margin-bottom: 15px !important;
+                }
+
+                h2 {
+                    text-align: left !important;
+                    height: auto !important;
+                    margin-bottom: 10px !important;
+                }
+
+                .fc-h2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: auto !important;
+                    text-transform: capitalize;
+                }
+            
+            }
+
+            &:nth-child(3) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                h1 {
+                    height: auto !important;
+                    margin-bottom: 15px !important;
+                }
+
+                h2 {
+                    height: auto !important;
+                    margin-bottom: 10px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 376px) {
+}
+
+@media only screen and (max-width: 321px) {
+    .footer-top {
+        margin: 2rem 5px !important;
+    }
+}

@@ -1,0 +1,510 @@
+.about-us-song {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    .aus-background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        opacity: .7;
+    }
+
+    .aus-s-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .3;
+    }
+
+    .aus-side-vine-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 100%;
+        z-index: 2;
+    }
+
+    .aus-side-vine-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 100%;
+        transform: scaleX(-1);
+        z-index: 2;
+    }
+
+    .aus-decoration-1 {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 300px;
+        height: auto;
+        opacity: .5 !important;
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .aus-decoration-2 {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        right: 200px;
+        top: 400px;
+        opacity: .4 !important;
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .aus-decoration-3 {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        top: 700px;
+        left: 160px;
+        opacity: .3 !important;
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .aus-decoration-4 {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        bottom: 700px;
+        right: 100px;
+        opacity: .4 !important;
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .aus-decoration-5 {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        bottom: 400px;
+        left: 120px;
+        opacity: .3 !important;
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .aus-decoration-6 {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        bottom: 100px;
+        right: 200px;
+        opacity: .6 !important;
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .about-us-song-content {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 4rem 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom , var(--main_color), transparent 20%), linear-gradient(to top , var(--main_color), transparent 20%);
+            z-index: 1;
+        }
+
+        .song-p {
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            margin-bottom: 1.5rem;
+            z-index: 10;
+            text-align: center;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            z-index: 10;
+            text-align: center;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+
+        .about-us-song-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-6 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-7 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-8 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-9 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-10 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-11 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-us-song-12 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 10;
+
+            &.show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .about-us-song-content {
+        padding: 4rem 80px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .about-us-song-content {
+        padding: 4rem 50px !important;
+    }
+
+    p {
+        color: var(--hover_color) !important;
+    }
+
+    .aus-decoration-1 {
+        left: 100px;
+    }
+
+    .aus-decoration-2 {
+        right: 140px !important;
+    }
+
+    .aus-decoration-3 {
+        left: 100px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-us-song-content {
+        padding: 4rem 25px !important;
+    }
+
+    .aus-side-vine-right {
+        right: -90px !important;
+        opacity: .7;
+    }
+
+    .aus-side-vine-left {
+        left: -90px !important;
+        opacity: .7;
+    }
+
+    .aus-decoration-1 {
+        left: 60px !important;
+    }
+
+    .aus-decoration-2 {
+        right: 40px !important;
+    }
+
+    .aus-decoration-3 {
+        left: 15px !important;
+    }
+
+    .aus-decoration-4 {
+        right: 25px !important;
+    }
+
+    .aus-decoration-5 {
+        left: 10px !important;
+    }
+
+    .aus-decoration-6 {
+        right: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about-us-song-content {
+        padding: 4rem 15px !important;
+    }
+
+    .aus-side-vine-right {
+        right: -120px !important;
+        opacity: .4 !important;
+    }
+
+    .aus-side-vine-left {
+        left: -120px !important;
+        opacity: .4 !important;
+    }
+
+    .aus-decoration-1 {
+        left: 15px !important;
+        width: 200px !important;
+    }
+
+    .aus-decoration-2 {
+        right: 10px !important;
+        width: 200px !important;
+    }
+
+    .aus-decoration-3 {
+        left: 5px !important;
+        width: 200px !important;
+    }
+
+    .aus-decoration-4 {
+        right: 15px !important;
+        width: 200px !important;
+    }
+
+    .aus-decoration-5 {
+        left: 5px !important;
+        width: 200px !important;
+    }
+
+    .aus-decoration-6 {
+        right: 10px !important;
+        width: 200px !important;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .about-us-song-content {
+        padding: 4rem 10px !important;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    p {
+        font-size: 1.1rem !important;
+    }
+
+    .aus-decoration-1 {
+        left: 10px !important;
+        width: 160px !important;
+    }
+
+    .aus-decoration-2 {
+        right: 5px !important;
+        width: 160px !important;
+    }
+
+    .aus-decoration-3 {
+        left: 0px !important;
+        width: 160px !important;
+    }
+
+    .aus-decoration-4 {
+        right: 10px !important;
+        width: 160px !important;
+    }
+
+    .aus-decoration-5 {
+        left: 0px !important;
+        width: 160px !important;
+    }
+
+    .aus-decoration-6 {
+        right: 5px !important;
+        width: 160px !important;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .about-us-song-content {
+        padding: 4rem 5px !important;
+    }
+
+    h1 {
+        font-size: 1.6rem !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+}

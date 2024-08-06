@@ -1,0 +1,116 @@
+.about-us-left {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    .about-us-left-content {
+        width: auto;
+        height: auto;
+        display: grid;
+        padding: 4rem 100px;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+        column-gap: 15px;
+        position: relative;
+
+        .aulc-column {
+            width: auto;
+            height: 420px;
+            position: relative;
+
+            &:nth-child(1) {
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-top-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                }
+
+                &.show {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            &:nth-child(2) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: right;
+                flex-direction: column;
+
+                &.show {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+                h1 {
+                    width: 100%;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .about-us-left-content {
+        padding: 4rem 80px !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .about-us-left-content {
+        padding: 4rem 50px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-us-left-content {
+        padding: 4rem 25px !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about-us-left-content {
+        padding: 4rem 15px !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+
+        .aulc-column {
+            &:nth-child(2) {
+                h1 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                h3 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .about-us-left-content {
+        padding: 4rem 10px !important;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .about-us-left-content {
+        padding: 4rem 5px !important;
+    }
+
+    .aulc-column {
+        &:nth-child(1) {
+            height: 380px !important;
+        }
+    }
+}
